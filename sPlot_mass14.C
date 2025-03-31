@@ -145,9 +145,9 @@ void FitMassModel(RooWorkspace &myws) {
   double massMax = 3.5;
   double tau_min = -10.;
   double tau_max = 10.;
-  double ptmin = 3.;
-  double ptmax = 4.;
-  double chi2opti = 40.;
+  double ptmin = 15.;
+  double ptmax = 30.;
+  double chi2opti = 90.;
   bool fixtails = false;
 
   RooRealVar *mass =
@@ -185,13 +185,13 @@ void FitMassModel(RooWorkspace &myws) {
   sss << myws.var("pT2")->getValV() ;
   string testbis = sss.str();
 
-  TFile *Param_01 = TFile::Open(Form("corr_frac_%s%s_EM_newChi2.root", test.c_str(), testbis.c_str()));
-  TH1F *Histo_01 = static_cast<TH1F *>(Param_01->Get(Form("corr_frac_%s%s", test.c_str(), testbis.c_str())));
+  //TFile *Param_01 = TFile::Open(Form("corr_frac_%s%s_EM_newChi2.root", test.c_str(), testbis.c_str()));
+  //TH1F *Histo_01 = static_cast<TH1F *>(Param_01->Get(Form("corr_frac_%s%s", test.c_str(), testbis.c_str())));
 
-  myws.factory(Form("A[%.4f]", Histo_01->GetBinContent(1)));
-  myws.factory(Form("B[%.4f]", Histo_01->GetBinContent(2)));
-  myws.factory(Form("C[%.4f]", Histo_01->GetBinContent(3)));
-  myws.factory(Form("cste[%.4f]", Histo_01->GetBinContent(4)));
+  //myws.factory(Form("A[%.4f]", Histo_01->GetBinContent(1)));
+  //myws.factory(Form("B[%.4f]", Histo_01->GetBinContent(2)));
+  //myws.factory(Form("C[%.4f]", Histo_01->GetBinContent(3)));
+  //myws.factory(Form("cste[%.4f]", Histo_01->GetBinContent(4)));
 
   //For VWG
   /*myws.factory(Form("A1[%.4f]", Histo_01->GetBinContent(1)));
@@ -218,13 +218,13 @@ void FitMassModel(RooWorkspace &myws) {
   //myws.factory(Form("cste[%.4f,%.4f,%.4f]", 0., -10., 10.));
 
   //NEW 3-4 with good Bump corr  
-  myws.factory(Form("mJPsi[%.4f]", 3.09322));
-  myws.factory(Form("sigma[%.4f]", 0.0548194));
-  myws.factory(Form("n1[%.4f]", 2.36949));
-  myws.factory(Form("alpha1[%.4f]", 1.00248));
-  myws.factory(Form("n2[%.4f]", 1.82001));
-  myws.factory(Form("alpha2[%.4f]", 2.18801));
-  myws.factory(Form("lambdas[%.4f]", -1.85976));
+  //myws.factory(Form("mJPsi[%.4f]", 3.09322));
+  //myws.factory(Form("sigma[%.4f]", 0.0548194));
+  //myws.factory(Form("n1[%.4f]", 2.36949));
+  //myws.factory(Form("alpha1[%.4f]", 1.00248));
+  //myws.factory(Form("n2[%.4f]", 1.82001));
+  //myws.factory(Form("alpha2[%.4f]", 2.18801));
+  //myws.factory(Form("lambdas[%.4f]", -1.85976));
 
   //0-1 DCA Chi2 30 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]", 3.0980));
@@ -236,6 +236,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]", 0.5779));
   myws.factory(Form("B[%.4f]", 0.0101));
   myws.factory(Form("C[%.4f]", 0.0529));*/
+  /*myws.factory(Form("mJPsi[%.4f]", 3.0980));
+  myws.factory(Form("sigma[%.4f]", 0.0487));
+  myws.factory(Form("n1[%.4f]", 5.8494));
+  myws.factory(Form("alpha1[%.4f]", 0.6926));
+  myws.factory(Form("n2[%.4f]", 0.1531));
+  myws.factory(Form("alpha2[%.4f]", 2.2491));
+  myws.factory(Form("lambdas[%.4f]", -2.6155));*/
 
   //1-2 DCA Chi2 30 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.0955));
@@ -247,6 +254,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      0.1762));
   myws.factory(Form("B[%.4f]",      0.3699));
   myws.factory(Form("C[%.4f]",      0.0314));*/
+  /*myws.factory(Form("mJPsi[%.4f]", 3.0959));
+  myws.factory(Form("sigma[%.4f]", 0.0461));
+  myws.factory(Form("n1[%.4f]", 6.3014));
+  myws.factory(Form("alpha1[%.4f]", 0.7097));
+  myws.factory(Form("n2[%.4f]", 58.8212));
+  myws.factory(Form("alpha2[%.4f]", 1.8013));
+  myws.factory(Form("lambdas[%.4f]", -1.5753));*/
 
   //2-3 DCA Chi2 35 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.0945));
@@ -258,6 +272,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      0.6071));
   myws.factory(Form("B[%.4f]",      0.0288));
   myws.factory(Form("C[%.4f]",      0.0760));*/
+  /*myws.factory(Form("mJPsi[%.4f]", 3.0951));
+  myws.factory(Form("sigma[%.4f]", 0.0500));
+  myws.factory(Form("n1[%.4f]", 23.6946));
+  myws.factory(Form("alpha1[%.4f]", 0.8144));
+  myws.factory(Form("n2[%.4f]", 0.0));
+  myws.factory(Form("alpha2[%.4f]", 3.0575));
+  myws.factory(Form("lambdas[%.4f]", -2.1092));*/
 
   //3-4 DCA Chi2 40 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.0937));
@@ -280,6 +301,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      0.8208));
   myws.factory(Form("B[%.4f]",      -1.2592));
   myws.factory(Form("C[%.4f]",      -0.0105));*/
+  /*myws.factory(Form("mJPsi[%.4f]", 3.0923));
+  myws.factory(Form("sigma[%.4f]", 0.0589));
+  myws.factory(Form("n1[%.4f]", 3.2672));
+  myws.factory(Form("alpha1[%.4f]", 1.0243));
+  myws.factory(Form("n2[%.4f]", 2.4629));
+  myws.factory(Form("alpha2[%.4f]", 2.1946));
+  myws.factory(Form("lambdas[%.4f]", -1.2638));*/
 
   //5-6 DCA Chi2 50 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.0948));
@@ -291,6 +319,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      0.6206));
   myws.factory(Form("B[%.4f]",      1.1602));
   myws.factory(Form("C[%.4f]",      0.0652));*/
+  //myws.factory(Form("mJPsi[%.4f]", 3.0961));
+  //myws.factory(Form("sigma[%.4f]", 0.0584));
+  //myws.factory(Form("n1[%.4f]", 30.7687));
+  //myws.factory(Form("alpha1[%.4f]", 0.8261));
+  //myws.factory(Form("n2[%.4f]", 32.8423));
+  //myws.factory(Form("alpha2[%.4f]", 4.8511));
+  //myws.factory(Form("lambdas[%.4f]", -0.9498));
 
   //6-8 DCA Chi2 60 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.0983));
@@ -302,6 +337,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      0.5830));
   myws.factory(Form("B[%.4f]",      0.2531));
   myws.factory(Form("C[%.4f]",      0.1473));*/
+  //myws.factory(Form("mJPsi[%.4f]", 3.0991));
+  //myws.factory(Form("sigma[%.4f]", 0.0596));
+  //myws.factory(Form("n1[%.4f]", 23.1637));
+  //myws.factory(Form("alpha1[%.4f]", 0.8285));
+  //myws.factory(Form("n2[%.4f]", 7.2662));
+  //myws.factory(Form("alpha2[%.4f]", 4.3479));
+  //myws.factory(Form("lambdas[%.4f]", -0.7814));
 
   //8-10 DCA Chi2 65 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.0973));
@@ -313,6 +355,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      0.4387));
   myws.factory(Form("B[%.4f]",      1.9244));
   myws.factory(Form("C[%.4f]",      -0.0416));*/
+  //myws.factory(Form("mJPsi[%.4f]", 3.0997));
+  //myws.factory(Form("sigma[%.4f]", 0.0607));
+  //myws.factory(Form("n1[%.4f]", 85.2370));
+  //myws.factory(Form("alpha1[%.4f]", 0.8919));
+  //myws.factory(Form("n2[%.4f]", 59.9946));
+  //myws.factory(Form("alpha2[%.4f]", 5.6002));
+  //myws.factory(Form("lambdas[%.4f]", -0.7075));
 
   //10-15 DCA Chi2 90 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.1037));
@@ -324,6 +373,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      2.3828));
   myws.factory(Form("B[%.4f]",      2.1389));
   myws.factory(Form("C[%.4f]",      -3.0094));*/
+  //myws.factory(Form("mJPsi[%.4f]", 3.1049));
+  //myws.factory(Form("sigma[%.4f]", 0.0595));
+  //myws.factory(Form("n1[%.4f]", 7.0747));
+  //myws.factory(Form("alpha1[%.4f]", 0.8011));
+  //myws.factory(Form("n2[%.4f]", 6.0106));
+  //myws.factory(Form("alpha2[%.4f]", 1.2714));
+  //myws.factory(Form("lambdas[%.4f]", -0.9021));
 
   //15-30 DCA Chi2 90 VWG sig CB2 data tails cste = 0
   /*myws.factory(Form("mJPsi[%.4f]",  3.1072));
@@ -335,6 +391,13 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory(Form("A[%.4f]",      0.4838));
   myws.factory(Form("B[%.4f]",      1.9951));
   myws.factory(Form("C[%.4f]",      -0.0239));*/
+  myws.factory(Form("mJPsi[%.4f]", 3.1066));
+  myws.factory(Form("sigma[%.4f]", 0.0621));
+  myws.factory(Form("n1[%.4f]", 9.3165));
+  myws.factory(Form("alpha1[%.4f]", 0.7615));
+  myws.factory(Form("n2[%.4f]", 3.1386));
+  myws.factory(Form("alpha2[%.4f]", 1.3483));
+  myws.factory(Form("lambdas[%.4f]", -1.0664));
 
   //0-1 values DCA Chi2 30
   //bkg Exp sig CB2 data tails
@@ -775,8 +838,8 @@ void FitMassModel(RooWorkspace &myws) {
   myws.factory("RooDoubleCB::m_signal(mass, mJPsi, sigma, alpha1, n1, alpha2, n2)");
 
   //For Exp bkg
-  //myws.factory("RooExponential::m_bkg(mass, lambdas, true)");
-  myws.factory("RooBumpExp::m_bkg(mass, lambdas, A, B, C, cste)");
+  myws.factory("RooExponential::m_bkg(mass, lambdas, true)");
+  //myws.factory("RooBumpExp::m_bkg(mass, lambdas, A, B, C, cste)");
 
   //For VWG background
   //myws.factory("RooVWG::m_bkg(mass, A, B, C)");
@@ -998,7 +1061,10 @@ void MakePlots(RooWorkspace &myws) {
   pad2->SetBottomMargin(0.4);
 
   //frame->GetYaxis()->SetRangeUser(5., 1400.);
-  frame->GetYaxis()->SetRangeUser(5., 7000.);
+  frame->GetYaxis()->SetRangeUser(5., 1500.);
+  //frame->GetYaxis()->SetRangeUser(5., 4000.);
+  //frame->GetYaxis()->SetRangeUser(5., 7000.);
+  //frame->GetYaxis()->SetRangeUser(5., 14000.);
 
   frame->GetXaxis()->SetTitleSize(titlesize);
   //frame->GetXaxis()->SetTitleOffset(titleoffset);
@@ -1259,12 +1325,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
 
   //NEW 3-4 with good bump corr
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
-  myws.factory(Form("sigma1[%.6f]", 0.114331)); //10 0.5
-  myws.factory(Form("sigma2[%.6f]", 0.0611534));
-  myws.factory(Form("n11[%.6f]", 1.41289));
-  myws.factory(Form("alpha11[%.6f]", 1.6595));
-  myws.factory(Form("fres[%.4f]", 0.429547));
-  myws.factory(Form("tzJPsi[%.6f]", 0.003592));
+  //myws.factory(Form("sigma1[%.6f]", 0.114331)); //10 0.5
+  //myws.factory(Form("sigma2[%.6f]", 0.0611534));
+  //myws.factory(Form("n11[%.6f]", 1.41289));
+  //myws.factory(Form("alpha11[%.6f]", 1.6595));
+  //myws.factory(Form("fres[%.4f]", 0.429547));
+  //myws.factory(Form("tzJPsi[%.6f]", 0.003592));
 
   //0-1 values VWG DCA Chi2 30 
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1274,6 +1340,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.904671));
   myws.factory(Form("fres[%.4f]", 0.266444));
   myws.factory(Form("tzJPsi[%.6f]", -0.007209));*/
+  /*myws.factory(Form("sigma1[%.6f]", 0.225724)); //10 0.5
+  myws.factory(Form("sigma2[%.6f]", 0.098771));
+  myws.factory(Form("n11[%.6f]", 1.34093));
+  myws.factory(Form("alpha11[%.6f]", 1.828183));
+  myws.factory(Form("fres[%.4f]", 0.259245));
+  myws.factory(Form("tzJPsi[%.6f]", 0.005333));*/
 
   //1-2 values VWG DCA Chi2 30
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1283,6 +1355,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.590531));
   myws.factory(Form("fres[%.4f]", 0.330216));
   myws.factory(Form("tzJPsi[%.6f]", -0.002012));*/
+  /*myws.factory(Form("sigma1[%.6f]", 0.161464)); //10 0.5
+  myws.factory(Form("sigma2[%.6f]", 0.078631));
+  myws.factory(Form("n11[%.6f]", 1.521372));
+  myws.factory(Form("alpha11[%.6f]", 1.590860));
+  myws.factory(Form("fres[%.4f]", 0.327360));
+  myws.factory(Form("tzJPsi[%.6f]", 0.001962));*/
 
   //2-3 values VWG DCA Chi2 35
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1292,6 +1370,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.663806));
   myws.factory(Form("fres[%.4f]", 0.337138));
   myws.factory(Form("tzJPsi[%.6f]", 0.001697));*/
+  /*myws.factory(Form("sigma1[%.6f]", 0.143049)); //10 0.5
+  myws.factory(Form("sigma2[%.6f]", 0.074224));
+  myws.factory(Form("n11[%.6f]", 1.480944));
+  myws.factory(Form("alpha11[%.6f]", 1.667820));
+  myws.factory(Form("fres[%.4f]", 0.340513));
+  myws.factory(Form("tzJPsi[%.6f]", 0.001552));*/
   
   //3-4 values VWG DCA Chi2 40
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1310,6 +1394,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.717435));
   myws.factory(Form("fres[%.4f]", 0.347933));
   myws.factory(Form("tzJPsi[%.6f]", 0.003602));*/
+  //myws.factory(Form("sigma1[%.6f]", 0.100990)); //10 0.5
+  //myws.factory(Form("sigma2[%.6f]", 0.065271));
+  //myws.factory(Form("n11[%.6f]", 1.521497));
+  //myws.factory(Form("alpha11[%.6f]", 1.710038));
+  //myws.factory(Form("fres[%.4f]", 0.346746));
+  //myws.factory(Form("tzJPsi[%.6f]", 0.003599));
 
   //5-6 values VWG DCA Chi2 50
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1319,6 +1409,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.613422));
   myws.factory(Form("fres[%.4f]", 0.482188));
   myws.factory(Form("tzJPsi[%.6f]", 0.002379));*/
+  //myws.factory(Form("sigma1[%.6f]", 0.085472)); //10 0.5
+  //myws.factory(Form("sigma2[%.6f]", 0.051492));
+  //myws.factory(Form("n11[%.6f]", 1.488315));
+  //myws.factory(Form("alpha11[%.6f]", 1.619788));
+  //myws.factory(Form("fres[%.4f]", 0.482244));
+  //myws.factory(Form("tzJPsi[%.6f]", 0.002315));
 
   //6-8 values VWG DCA Chi2 60
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1328,6 +1424,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.730539));
   myws.factory(Form("fres[%.4f]", 0.462876));
   myws.factory(Form("tzJPsi[%.6f]", 0.000446));*/
+  //myws.factory(Form("sigma1[%.6f]", 0.075992)); //10 0.5
+  //myws.factory(Form("sigma2[%.6f]", 0.045563));
+  //myws.factory(Form("n11[%.6f]", 1.368173));
+  //myws.factory(Form("alpha11[%.6f]", 1.846924));
+  //myws.factory(Form("fres[%.4f]", 0.428932));
+  //myws.factory(Form("tzJPsi[%.6f]", 0.000330));
 
   //8-10 values VWG DCA Chi2 65
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1337,6 +1439,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.651346));
   myws.factory(Form("fres[%.4f]", 0.432323));
   myws.factory(Form("tzJPsi[%.6f]", 0.001310));*/
+  //myws.factory(Form("sigma1[%.6f]", 0.066366)); //10 0.5
+  //myws.factory(Form("sigma2[%.6f]", 0.037309));
+  //myws.factory(Form("n11[%.6f]", 1.612392));
+  //myws.factory(Form("alpha11[%.6f]", 1.666926));
+  //myws.factory(Form("fres[%.4f]", 0.447506));
+  //myws.factory(Form("tzJPsi[%.6f]", 0.001158));
 
   //10-15 values VWG DCA Chi2 90
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1346,6 +1454,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 2.310005));
   myws.factory(Form("fres[%.4f]", 0.301570));
   myws.factory(Form("tzJPsi[%.6f]", -0.000022));*/
+  //myws.factory(Form("sigma1[%.6f]", 0.078267)); //10 0.5
+  //myws.factory(Form("sigma2[%.6f]", 0.037413));
+  //myws.factory(Form("n11[%.6f]", 1.235676));
+  //myws.factory(Form("alpha11[%.6f]", 2.166185));
+  //myws.factory(Form("fres[%.4f]", 0.264027));
+  //myws.factory(Form("tzJPsi[%.6f]", -0.000068));
 
   //15-30 values VWG DCA Chi2 90
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1355,6 +1469,12 @@ void AddTauzSignalModel(RooWorkspace &myws) {
   myws.factory(Form("alpha11[%.6f]", 1.796588));
   myws.factory(Form("fres[%.4f]", 0.298184));
   myws.factory(Form("tzJPsi[%.6f]", 0.003551));*/
+  myws.factory(Form("sigma1[%.6f]", 0.073610)); //10 0.5
+  myws.factory(Form("sigma2[%.6f]", 0.035784));
+  myws.factory(Form("n11[%.6f]", 1.316378));
+  myws.factory(Form("alpha11[%.6f]", 2.028249));
+  myws.factory(Form("fres[%.4f]", 0.265550));
+  myws.factory(Form("tzJPsi[%.6f]", 0.000715));
 
   //0-1 values DCA Chi2 30
   //myws.factory(Form("tzJPsi[%.6f]", 0.));
@@ -1574,14 +1694,14 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DDS[%.4f,%.4f,%.4f]", 1.5, 0., 3.));
   myws.factory(Form("tzJPsi_bkg[%.6f,%.6f,%.6f]", 0., -1., 1.));*/
 
-  //NEW 3-4 good bump corr
-  myws.factory(Form("b[%.4f]", 0.860539));
-  myws.factory(Form("f_DLIV[%.4f]", 0.796781)); 
-  myws.factory(Form("f_DFSS[%.4f]", 0.572095)); 
-  myws.factory(Form("lambda_DSS[%.4f]", 0.315497));
-  myws.factory(Form("lambda_DF[%.4f]", 0.139084));
-  myws.factory(Form("lambda_DDS[%.4f]", 1.78732));
-  myws.factory(Form("tzJPsi_bkg[%.4f]", 0.0563322));
+  ////NEW 3-4 good bump corr
+  //myws.factory(Form("b[%.4f]", 0.860539));
+  //myws.factory(Form("f_DLIV[%.4f]", 0.796781)); 
+  //myws.factory(Form("f_DFSS[%.4f]", 0.572095)); 
+  //myws.factory(Form("lambda_DSS[%.4f]", 0.315497));
+  //myws.factory(Form("lambda_DF[%.4f]", 0.139084));
+  //myws.factory(Form("lambda_DDS[%.4f]", 1.78732));
+  //myws.factory(Form("tzJPsi_bkg[%.4f]", 0.0563322));
 
   //0-1 values VWG DCA Chi2 30 
   /*myws.factory(Form("b[%.4f]", 0.658627));
@@ -1591,6 +1711,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.227694));
   myws.factory(Form("lambda_DDS[%.4f]", 2.446299));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.032319));*/
+  /*myws.factory(Form("b[%.4f]", 0.677929));
+  myws.factory(Form("f_DLIV[%.4f]", 0.708500)); 
+  myws.factory(Form("f_DFSS[%.4f]", 0.594487)); 
+  myws.factory(Form("lambda_DSS[%.4f]", 0.376400));
+  myws.factory(Form("lambda_DF[%.4f]", 0.226335));
+  myws.factory(Form("lambda_DDS[%.4f]", 2.450728));
+  myws.factory(Form("tzJPsi_bkg[%.4f]", 0.034425));*/
 
   //1-2 values VWG DCA Chi2 30 
   /*myws.factory(Form("b[%.4f]", 0.742510));
@@ -1600,6 +1727,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.200877));
   myws.factory(Form("lambda_DDS[%.4f]", 2.265608));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.033321));*/
+  /*myws.factory(Form("b[%.4f]", 0.732702));
+  myws.factory(Form("f_DLIV[%.4f]", 0.741752)); 
+  myws.factory(Form("f_DFSS[%.4f]", 0.610291)); 
+  myws.factory(Form("lambda_DSS[%.4f]", 0.347962));
+  myws.factory(Form("lambda_DF[%.4f]", 0.202082));
+  myws.factory(Form("lambda_DDS[%.4f]", 2.271579));
+  myws.factory(Form("tzJPsi_bkg[%.4f]", 0.031188));*/
 
   //2-3 values VWG DCA Chi2 35
   /*myws.factory(Form("b[%.4f]", 0.738611));
@@ -1609,6 +1743,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.198016));
   myws.factory(Form("lambda_DDS[%.4f]", 2.098319));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.024468));*/
+  /*myws.factory(Form("b[%.4f]", 0.717970));
+  myws.factory(Form("f_DLIV[%.4f]", 0.771084)); 
+  myws.factory(Form("f_DFSS[%.4f]", 0.681752)); 
+  myws.factory(Form("lambda_DSS[%.4f]", 0.332718));
+  myws.factory(Form("lambda_DF[%.4f]", 0.199907));
+  myws.factory(Form("lambda_DDS[%.4f]", 2.111054));
+  myws.factory(Form("tzJPsi_bkg[%.4f]", 0.021992));*/
 
   //3-4 values VWG DCA Chi2 40
   /*myws.factory(Form("b[%.4f]", 0.805267));
@@ -1627,6 +1768,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.150880));
   myws.factory(Form("lambda_DDS[%.4f]", 1.700983));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.030875));*/
+  //myws.factory(Form("b[%.4f]", 0.818906));
+  //myws.factory(Form("f_DLIV[%.4f]", 0.822345)); 
+  //myws.factory(Form("f_DFSS[%.4f]", 0.668166)); 
+  //myws.factory(Form("lambda_DSS[%.4f]", 0.325406));
+  //myws.factory(Form("lambda_DF[%.4f]", 0.148014));
+  //myws.factory(Form("lambda_DDS[%.4f]", 1.689273));
+  //myws.factory(Form("tzJPsi_bkg[%.4f]", 0.035436));
 
   //5-6 values VWG DCA Chi2 50
   /*myws.factory(Form("b[%.4f]", 0.844666));
@@ -1636,6 +1784,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.136815));
   myws.factory(Form("lambda_DDS[%.4f]", 1.608270));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.036117));*/
+  //myws.factory(Form("b[%.4f]", 0.796209));
+  //myws.factory(Form("f_DLIV[%.4f]", 0.841410)); 
+  //myws.factory(Form("f_DFSS[%.4f]", 0.688501)); 
+  //myws.factory(Form("lambda_DSS[%.4f]", 0.366528));
+  //myws.factory(Form("lambda_DF[%.4f]", 0.137910));
+  //myws.factory(Form("lambda_DDS[%.4f]", 1.630785));
+  //myws.factory(Form("tzJPsi_bkg[%.4f]", 0.026687));
 
   //6-8 values VWG DCA Chi2 60
   /*myws.factory(Form("b[%.4f]", 0.9));
@@ -1645,6 +1800,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.124966));
   myws.factory(Form("lambda_DDS[%.4f]", 1.393096));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.062568));*/
+  //myws.factory(Form("b[%.4f]", 0.85));
+  //myws.factory(Form("f_DLIV[%.4f]", 0.836706)); 
+  //myws.factory(Form("f_DFSS[%.4f]", 0.646222)); 
+  //myws.factory(Form("lambda_DSS[%.4f]", 0.350981));
+  //myws.factory(Form("lambda_DF[%.4f]", 0.110253));
+  //myws.factory(Form("lambda_DDS[%.4f]", 1.387303));
+  //myws.factory(Form("tzJPsi_bkg[%.4f]", 0.037230));
 
   //8-10 values VWG DCA Chi2 65
   /*myws.factory(Form("b[%.4f]", 0.8999));
@@ -1654,6 +1816,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.123474));
   myws.factory(Form("lambda_DDS[%.4f]", 1.297439));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.001834));*/
+  //myws.factory(Form("b[%.4f]", 0.896247));
+  //myws.factory(Form("f_DLIV[%.4f]", 0.833252)); 
+  //myws.factory(Form("f_DFSS[%.4f]", 0.766203)); 
+  //myws.factory(Form("lambda_DSS[%.4f]", 0.350221));
+  //myws.factory(Form("lambda_DF[%.4f]", 0.083046));
+  //myws.factory(Form("lambda_DDS[%.4f]", 1.236831));
+  //myws.factory(Form("tzJPsi_bkg[%.4f]", 0.009110));
 
   //10-15 values VWG DCA Chi2 90
   /*myws.factory(Form("b[%.4f]", 0.9));
@@ -1663,6 +1832,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.095334));
   myws.factory(Form("lambda_DDS[%.4f]", 1.003270));
   myws.factory(Form("tzJPsi_bkg[%.4f]", 0.021189));*/
+  //myws.factory(Form("b[%.4f]", 0.85));
+  //myws.factory(Form("f_DLIV[%.4f]", 0.856529)); 
+  //myws.factory(Form("f_DFSS[%.4f]", 0.802960)); 
+  //myws.factory(Form("lambda_DSS[%.4f]", 0.401445));
+  //myws.factory(Form("lambda_DF[%.4f]", 0.131094));
+  //myws.factory(Form("lambda_DDS[%.4f]", 1.036481));
+  //myws.factory(Form("tzJPsi_bkg[%.4f]", 0.020180));
 
   //15-30 values VWG DCA Chi2 90
   /*myws.factory(Form("b[%.4f]", 0.8999));
@@ -1672,6 +1848,13 @@ void AddTauzBkgModel(RooWorkspace &myws) {
   myws.factory(Form("lambda_DF[%.4f]", 0.096903));
   myws.factory(Form("lambda_DDS[%.4f]", 1.024153));
   myws.factory(Form("tzJPsi_bkg[%.4f]", -0.015639));*/
+  myws.factory(Form("b[%.4f]", 0.84999));
+  myws.factory(Form("f_DLIV[%.4f]", 0.896680)); 
+  myws.factory(Form("f_DFSS[%.4f]", 0.897764)); 
+  myws.factory(Form("lambda_DSS[%.4f]", 0.405195));
+  myws.factory(Form("lambda_DF[%.4f]", 0.129420));
+  myws.factory(Form("lambda_DDS[%.4f]", 0.982057));
+  myws.factory(Form("tzJPsi_bkg[%.4f]", -0.0187884));
 
   //0-1 values DCA Chi2 30 tzJPsi free NEW
   /*myws.factory(Form("b[%.4f]", 0.677929));
@@ -2070,6 +2253,7 @@ void MakeSignalPlot(RooWorkspace &myws) {
 
   pad2->Draw();
   pad2->cd();
+  frame2->GetYaxis()->SetRangeUser(-5.9, 5.9);
   frame2->Draw();
 
   l_middle->Draw("same");
@@ -2104,7 +2288,7 @@ void MakeSignalPlot(RooWorkspace &myws) {
   }
   ndof = nFullBins - nFitPar;
   //t1->DrawLatex(0.13, 0.8, Form("#chi^{2}/ndof = %.0f / %d ", chi2, ndof));
-  pad2->Update();
+  //pad2->Update();
 
   pad1->cd();
   t->DrawLatex(0.15, 0.85-dy, Form("#chi^{2}/ndof = %.0f / %d ", chi2, ndof));
@@ -2232,7 +2416,7 @@ void MakeBkgPlot(RooWorkspace &myws) {
   frame->GetYaxis()->SetTitleSize(titlesize);
   frame->GetYaxis()->SetTitleOffset(titleoffset);
   frame->GetYaxis()->SetLabelSize(labelsize);
-  frame->GetYaxis()->SetRangeUser(5,1e6);
+  frame->GetYaxis()->SetRangeUser(1.5,1e6);
 
   cFig->cd();
   pad1->SetLogy();
@@ -2313,6 +2497,7 @@ void MakeBkgPlot(RooWorkspace &myws) {
 
   pad2->Draw();
   pad2->cd();
+  frame2->GetYaxis()->SetRangeUser(-4.9, 4.9);
   frame2->Draw();
 
   l_middle->Draw("same");
@@ -2349,7 +2534,7 @@ void MakeBkgPlot(RooWorkspace &myws) {
   }
   ndof = nFullBins - nFitPar;
   //t1->DrawLatex(0.13, 0.8, Form("#chi^{2}/ndof = %.0f / %d ", chi2, ndof));
-  pad2->Update();
+  //pad2->Update();
 
   pad1->cd();
   t->DrawLatex(0.15, 0.85-dy, Form("#chi^{2}/ndof = %.0f / %d ", chi2, ndof));
