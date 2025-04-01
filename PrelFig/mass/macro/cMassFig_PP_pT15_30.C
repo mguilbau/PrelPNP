@@ -4,8 +4,8 @@
 void cMassFig_PP_pT15_30()
 {
 //=========Macro generated from canvas: cMassFig_PP/cMassFig
-//=========  (Mon Mar 31 16:56:57 2025) by ROOT version 6.32.06
-   TCanvas *cMassFig_PP = new TCanvas("cMassFig_PP", "cMassFig",1667,743,1000,800);
+//=========  (Tue Apr  1 11:18:58 2025) by ROOT version 6.32.06
+   TCanvas *cMassFig_PP = new TCanvas("cMassFig_PP", "cMassFig",20,43,1000,800);
    cMassFig_PP->Range(0,0,1,1);
    cMassFig_PP->SetFillColor(0);
    cMassFig_PP->SetBorderMode(0);
@@ -16,40 +16,40 @@ void cMassFig_PP_pT15_30()
    TPad *pad1_PP__0 = new TPad("pad1_PP", "",0,0,1,1);
    pad1_PP__0->Draw();
    pad1_PP__0->cd();
-   pad1_PP__0->Range(2.375,-44.375,3.625,449.375);
+   pad1_PP__0->Range(2.375,-25.625,3.625,280.625);
    pad1_PP__0->SetFillColor(0);
    pad1_PP__0->SetBorderMode(0);
    pad1_PP__0->SetBorderSize(2);
    pad1_PP__0->SetFrameBorderMode(0);
    pad1_PP__0->SetFrameBorderMode(0);
    
-   TH1D *frame_mass_d7b99b0__1 = new TH1D("frame_mass_d7b99b0__1"," ",40,2.5,3.5);
-   frame_mass_d7b99b0__1->SetBinContent(1,195.0304);
-   frame_mass_d7b99b0__1->SetMinimum(5);
-   frame_mass_d7b99b0__1->SetMaximum(400);
-   frame_mass_d7b99b0__1->SetEntries(2);
-   frame_mass_d7b99b0__1->SetDirectory(nullptr);
-   frame_mass_d7b99b0__1->SetStats(0);
+   TH1D *frame_mass_cf4a630__1 = new TH1D("frame_mass_cf4a630__1"," ",40,2.5,3.5);
+   frame_mass_cf4a630__1->SetBinContent(1,194.9056);
+   frame_mass_cf4a630__1->SetMinimum(5);
+   frame_mass_cf4a630__1->SetMaximum(250);
+   frame_mass_cf4a630__1->SetEntries(1);
+   frame_mass_cf4a630__1->SetDirectory(nullptr);
+   frame_mass_cf4a630__1->SetStats(0);
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
-   frame_mass_d7b99b0__1->SetLineColor(ci);
-   frame_mass_d7b99b0__1->GetXaxis()->SetTitle("M_{#mu#mu} (GeV/c^{2})");
-   frame_mass_d7b99b0__1->GetXaxis()->SetLabelFont(42);
-   frame_mass_d7b99b0__1->GetXaxis()->SetTitleSize(0.04);
-   frame_mass_d7b99b0__1->GetXaxis()->SetTitleOffset(1);
-   frame_mass_d7b99b0__1->GetXaxis()->SetTitleFont(42);
-   frame_mass_d7b99b0__1->GetYaxis()->SetTitle("Events / ( 0.025 GeV/c^{2} )");
-   frame_mass_d7b99b0__1->GetYaxis()->SetLabelFont(42);
-   frame_mass_d7b99b0__1->GetYaxis()->SetLabelSize(0.035);
-   frame_mass_d7b99b0__1->GetYaxis()->SetTitleSize(0.04);
-   frame_mass_d7b99b0__1->GetYaxis()->SetTitleOffset(1.25);
-   frame_mass_d7b99b0__1->GetYaxis()->SetTitleFont(42);
-   frame_mass_d7b99b0__1->GetZaxis()->SetLabelFont(42);
-   frame_mass_d7b99b0__1->GetZaxis()->SetTitleOffset(1);
-   frame_mass_d7b99b0__1->GetZaxis()->SetTitleFont(42);
-   frame_mass_d7b99b0__1->Draw("FUNC");
+   frame_mass_cf4a630__1->SetLineColor(ci);
+   frame_mass_cf4a630__1->GetXaxis()->SetTitle("M_{#mu#mu} (GeV/c^{2})");
+   frame_mass_cf4a630__1->GetXaxis()->SetLabelFont(42);
+   frame_mass_cf4a630__1->GetXaxis()->SetTitleSize(0.045);
+   frame_mass_cf4a630__1->GetXaxis()->SetTitleOffset(1);
+   frame_mass_cf4a630__1->GetXaxis()->SetTitleFont(42);
+   frame_mass_cf4a630__1->GetYaxis()->SetTitle("Events / ( 0.025 GeV/c^{2} )");
+   frame_mass_cf4a630__1->GetYaxis()->SetLabelFont(42);
+   frame_mass_cf4a630__1->GetYaxis()->SetLabelSize(0.04);
+   frame_mass_cf4a630__1->GetYaxis()->SetTitleSize(0.045);
+   frame_mass_cf4a630__1->GetYaxis()->SetTitleOffset(1.12);
+   frame_mass_cf4a630__1->GetYaxis()->SetTitleFont(42);
+   frame_mass_cf4a630__1->GetZaxis()->SetLabelFont(42);
+   frame_mass_cf4a630__1->GetZaxis()->SetTitleOffset(1);
+   frame_mass_cf4a630__1->GetZaxis()->SetTitleFont(42);
+   frame_mass_cf4a630__1->Draw("FUNC");
    
    Double_t h_dataWithSWeights_fx3001[40] = { 2.5125, 2.5375, 2.5625, 2.5875, 2.6125, 2.6375, 2.6625, 2.6875, 2.7125, 2.7375, 2.7625, 2.7875, 2.8125, 2.8375, 2.8625, 2.8875, 2.9125,
    2.9375, 2.9625, 2.9875, 3.0125, 3.0375, 3.0625, 3.0875, 3.1125, 3.1375, 3.1625, 3.1875, 3.2125, 3.2375, 3.2625, 3.2875, 3.3125,
@@ -95,19 +95,17 @@ void cMassFig_PP_pT15_30()
    
    grae->Draw("p");
    
-   Double_t m_signal_fx1[84] = { 2.5, 2.525, 2.55, 2.575, 2.6, 2.625, 2.65, 2.675, 2.7, 2.725, 2.75, 2.775, 2.8, 2.825, 2.85, 2.875, 2.9,
-   2.9125, 2.925, 2.9375, 2.95, 2.9625, 2.975, 2.9875, 3, 3.00625, 3.0125, 3.01875, 3.025, 3.03125, 3.0375, 3.04375, 3.05,
-   3.05625, 3.0625, 3.06875, 3.075, 3.08125, 3.084375, 3.0875, 3.090625, 3.09375, 3.096875, 3.1, 3.103125, 3.10625, 3.109375, 3.1125, 3.115625,
-   3.11875, 3.121875, 3.125, 3.128125, 3.13125, 3.1375, 3.14375, 3.15, 3.15625, 3.1625, 3.175, 3.18125, 3.1875, 3.19375, 3.2, 3.20625,
-   3.2125, 3.21875, 3.225, 3.23125, 3.2375, 3.25, 3.2625, 3.275, 3.2875, 3.3, 3.325, 3.35, 3.375, 3.4, 3.425, 3.45,
-   3.475, 3.5, 3.5 };
-   Double_t m_signal_fy1[84] = { 0.7426499, 0.8875751, 1.064477, 1.281263, 1.548012, 1.87764, 2.28678, 2.796965, 3.436231, 4.241284, 5.260483, 6.557935, 8.219191, 10.35922, 13.13362, 16.75468, 21.51423,
-   24.44182, 27.81701, 31.716, 36.2293, 41.4647, 47.55092, 54.64203, 62.92294, 67.57744, 72.61623, 78.07439, 83.99052, 90.40712, 97.371, 104.9338, 113.1525,
-   122.09, 131.6313, 140.6693, 148.8129, 155.8414, 158.8745, 161.5571, 163.8694, 165.7944, 167.3179, 168.4282, 169.1172, 169.3795, 169.2131, 168.6194, 167.6028,
-   166.1711, 164.3348, 162.1078, 159.5066, 156.5502, 149.6595, 141.6301, 132.6808, 123.0442, 112.9576, 92.34784, 82.24012, 72.50062, 63.42129, 55.69893, 49.16985,
-   43.61341, 38.85599, 34.75974, 31.21431, 28.13063, 23.07218, 19.14757, 16.05759, 13.59273, 11.60333, 8.644302, 6.604621, 5.154678, 4.096733, 3.307351, 2.70682,
-   2.242138, 1.877143, 1.877143 };
-   TGraph *graph = new TGraph(84,m_signal_fx1,m_signal_fy1);
+   Double_t m_signal_fx1[81] = { 2.5, 2.525, 2.55, 2.575, 2.6, 2.625, 2.65, 2.675, 2.7, 2.725, 2.75, 2.775, 2.8, 2.825, 2.85, 2.875, 2.8875,
+   2.9, 2.9125, 2.925, 2.9375, 2.95, 2.9625, 2.975, 2.9875, 3, 3.0125, 3.025, 3.0375, 3.04375, 3.05, 3.05625, 3.0625,
+   3.06875, 3.075, 3.08125, 3.0875, 3.090625, 3.09375, 3.096875, 3.1, 3.103125, 3.10625, 3.109375, 3.1125, 3.115625, 3.11875, 3.121875, 3.125,
+   3.128125, 3.13125, 3.134375, 3.1375, 3.14375, 3.15, 3.175, 3.18125, 3.1875, 3.19375, 3.2, 3.20625, 3.2125, 3.21875, 3.225, 3.23125,
+   3.2375, 3.25, 3.2625, 3.275, 3.2875, 3.3, 3.3125, 3.325, 3.35, 3.375, 3.4, 3.425, 3.45, 3.475, 3.5, 3.5 };
+   Double_t m_signal_fy1[81] = { 0.7111991, 0.88807, 1.109476, 1.386771, 1.734237, 2.16985, 2.71625, 3.401963, 4.26295, 5.344567, 6.704055, 8.413688, 10.56477, 13.2727, 16.68344, 20.98166, 23.53437,
+   26.40115, 29.62105, 33.23807, 37.30173, 41.86778, 46.99903, 52.76623, 59.24907, 66.53735, 74.73223, 83.94776, 94.31248, 99.97036, 105.9713, 112.3362, 119.0875,
+   126.2489, 133.8455, 141.3007, 147.6779, 150.403, 152.7923, 154.8282, 156.4957, 157.7824, 158.6787, 159.1777, 159.2758, 158.9722, 158.2691, 157.1719, 155.6888,
+   153.8309, 151.6121, 149.0485, 146.1589, 139.4863, 131.7811, 96.2393, 88.36976, 81.15358, 74.53569, 68.46575, 62.8977, 57.78942, 53.10238, 48.80131, 44.85395,
+   41.23077, 34.85116, 29.47255, 24.9357, 21.10707, 17.87456, 15.14408, 12.83658, 9.23539, 6.656469, 4.806257, 3.476451, 2.51897, 1.828351, 1.329345, 1.329345 };
+   TGraph *graph = new TGraph(81,m_signal_fx1,m_signal_fy1);
    graph->SetName("m_signal");
    graph->SetTitle("Projection of massModel");
    graph->SetFillStyle(1000);
@@ -118,8 +116,8 @@ void cMassFig_PP_pT15_30()
    graph->SetLineWidth(3);
    
    TH1F *Graph_m_signal1 = new TH1F("Graph_m_signal1","Projection of massModel",100,2.4,3.6);
-   Graph_m_signal1->SetMinimum(0.6683849);
-   Graph_m_signal1->SetMaximum(186.2432);
+   Graph_m_signal1->SetMinimum(0.6400792);
+   Graph_m_signal1->SetMaximum(175.1323);
    Graph_m_signal1->SetDirectory(nullptr);
    Graph_m_signal1->SetStats(0);
 
@@ -140,9 +138,9 @@ void cMassFig_PP_pT15_30()
    Double_t m_bkg_fx2[42] = { 2.5, 2.525, 2.55, 2.575, 2.6, 2.625, 2.65, 2.675, 2.7, 2.725, 2.75, 2.775, 2.8, 2.825, 2.85, 2.875, 2.9,
    2.925, 2.95, 2.975, 3, 3.025, 3.05, 3.075, 3.1, 3.125, 3.15, 3.175, 3.2, 3.225, 3.25, 3.275, 3.3,
    3.325, 3.35, 3.375, 3.4, 3.425, 3.45, 3.475, 3.5, 3.5 };
-   Double_t m_bkg_fy2[42] = { 31.23601, 30.41426, 29.61413, 28.83505, 28.07646, 27.33783, 26.61864, 25.91836, 25.2365, 24.57259, 23.92614, 23.2967, 22.68381, 22.08705, 21.50599, 20.94022, 20.38933,
-   19.85293, 19.33064, 18.8221, 18.32693, 17.84479, 17.37533, 16.91823, 16.47315, 16.03977, 15.6178, 15.20693, 14.80687, 14.41734, 14.03805, 13.66874, 13.30915,
-   12.95901, 12.61809, 12.28614, 11.96292, 11.6482, 11.34176, 11.04338, 10.75286, 10.75286 };
+   Double_t m_bkg_fy2[42] = { 28.46697, 27.71551, 26.98388, 26.27156, 25.57805, 24.90285, 24.24547, 23.60544, 22.98231, 22.37562, 21.78496, 21.20988, 20.64999, 20.10487, 19.57415, 19.05743, 18.55436,
+   18.06456, 17.5877, 17.12342, 16.6714, 16.23131, 15.80284, 15.38568, 14.97953, 14.5841, 14.19911, 13.82429, 13.45936, 13.10406, 12.75814, 12.42135, 12.09346,
+   11.77422, 11.4634, 11.16079, 10.86617, 10.57933, 10.30006, 10.02816, 9.763438, 9.763438 };
    graph = new TGraph(42,m_bkg_fx2,m_bkg_fy2);
    graph->SetName("m_bkg");
    graph->SetTitle("Projection of massModel");
@@ -154,8 +152,8 @@ void cMassFig_PP_pT15_30()
    graph->SetLineWidth(3);
    
    TH1F *Graph_m_bkg2 = new TH1F("Graph_m_bkg2","Projection of massModel",100,2.4,3.6);
-   Graph_m_bkg2->SetMinimum(8.704543);
-   Graph_m_bkg2->SetMaximum(33.28432);
+   Graph_m_bkg2->SetMinimum(7.893085);
+   Graph_m_bkg2->SetMaximum(30.33733);
    Graph_m_bkg2->SetDirectory(nullptr);
    Graph_m_bkg2->SetStats(0);
 
@@ -173,19 +171,17 @@ void cMassFig_PP_pT15_30()
    
    graph->Draw("l");
    
-   Double_t massModel_fx3[84] = { 2.5, 2.525, 2.55, 2.575, 2.6, 2.625, 2.65, 2.675, 2.7, 2.725, 2.75, 2.775, 2.8, 2.825, 2.85, 2.875, 2.9,
-   2.9125, 2.925, 2.9375, 2.95, 2.9625, 2.975, 2.9875, 3, 3.00625, 3.0125, 3.01875, 3.025, 3.03125, 3.0375, 3.04375, 3.05,
-   3.05625, 3.0625, 3.06875, 3.075, 3.08125, 3.084375, 3.0875, 3.090625, 3.09375, 3.096875, 3.1, 3.103125, 3.10625, 3.109375, 3.1125, 3.115625,
-   3.11875, 3.121875, 3.125, 3.128125, 3.13125, 3.1375, 3.14375, 3.15, 3.15625, 3.1625, 3.175, 3.18125, 3.1875, 3.19375, 3.2, 3.20625,
-   3.2125, 3.21875, 3.225, 3.23125, 3.2375, 3.25, 3.2625, 3.275, 3.2875, 3.3, 3.325, 3.35, 3.375, 3.4, 3.425, 3.45,
-   3.475, 3.5, 3.5 };
-   Double_t massModel_fy3[84] = { 31.97866, 31.30183, 30.67861, 30.11631, 29.62447, 29.21547, 28.90542, 28.71532, 28.67274, 28.81387, 29.18662, 29.85463, 30.903, 32.44627, 34.63962, 37.69489, 41.90356,
-   44.56116, 47.66994, 51.30604, 55.55994, 60.53938, 66.37302, 73.21489, 81.24987, 85.78263, 90.70048, 96.03851, 101.8353, 108.1334, 114.9795, 122.4253, 130.5278,
-   139.3499, 148.7765, 157.7007, 165.7312, 172.6472, 175.6245, 178.2513, 180.5081, 182.3778, 183.846, 184.9014, 185.5355, 185.7432, 185.5224, 184.8745, 183.8038,
-   182.3181, 180.4281, 178.1476, 175.493, 172.4834, 165.4868, 157.3524, 148.2986, 138.5583, 128.3686, 107.5548, 97.34604, 87.50619, 78.32718, 70.5058, 63.87837,
-   58.22422, 53.36974, 49.17708, 45.53587, 42.35706, 37.11023, 32.99973, 29.72633, 27.08047, 24.91247, 21.60332, 19.22271, 17.44082, 16.05965, 14.95555, 14.04858,
-   13.28552, 12.63, 12.63 };
-   graph = new TGraph(84,massModel_fx3,massModel_fy3);
+   Double_t massModel_fx3[80] = { 2.5, 2.525, 2.55, 2.575, 2.6, 2.625, 2.65, 2.675, 2.7, 2.725, 2.75, 2.775, 2.8, 2.825, 2.85, 2.875, 2.9,
+   2.9125, 2.925, 2.9375, 2.95, 2.9625, 2.975, 2.9875, 3, 3.0125, 3.025, 3.0375, 3.04375, 3.05, 3.05625, 3.0625, 3.06875,
+   3.075, 3.08125, 3.0875, 3.090625, 3.09375, 3.096875, 3.1, 3.103125, 3.10625, 3.109375, 3.1125, 3.115625, 3.11875, 3.121875, 3.125, 3.128125,
+   3.13125, 3.134375, 3.1375, 3.14375, 3.15, 3.175, 3.18125, 3.1875, 3.19375, 3.2, 3.20625, 3.2125, 3.21875, 3.225, 3.23125, 3.2375,
+   3.25, 3.2625, 3.275, 3.2875, 3.3, 3.3125, 3.325, 3.35, 3.375, 3.4, 3.425, 3.45, 3.475, 3.5, 3.5 };
+   Double_t massModel_fy3[80] = { 29.17817, 28.60358, 28.09336, 27.65833, 27.31229, 27.0727, 26.96172, 27.0074, 27.24526, 27.72019, 28.48901, 29.62357, 31.21475, 33.37757, 36.25759, 40.03909, 44.9555,
+   47.92887, 51.30263, 55.12626, 59.45547, 64.35304, 69.88965, 76.14497, 83.20874, 91.18211, 100.1791, 110.3281, 115.8792, 121.7741, 128.0337, 134.6804, 141.7378,
+   149.2311, 156.5839, 162.8591, 165.5336, 167.8723, 169.8579, 171.4753, 172.712, 173.5584, 174.0077, 174.0563, 173.7033, 172.951, 171.8048, 170.2729, 168.3664,
+   166.099, 163.487, 160.5492, 153.7807, 145.9803, 110.0636, 102.1019, 94.79418, 88.08537, 81.92511, 76.26734, 71.06994, 66.29437, 61.90537, 57.87066, 54.16072,
+   47.60931, 42.06117, 37.35706, 33.36338, 29.96802, 27.07685, 24.6108, 20.69879, 17.81726, 15.67243, 14.05578, 12.81903, 11.85651, 11.09278, 11.09278 };
+   graph = new TGraph(80,massModel_fx3,massModel_fy3);
    graph->SetName("massModel");
    graph->SetTitle("Projection of massModel");
    graph->SetFillStyle(1000);
@@ -195,8 +191,8 @@ void cMassFig_PP_pT15_30()
    graph->SetLineWidth(3);
    
    TH1F *Graph_massModel3 = new TH1F("Graph_massModel3","Projection of massModel",100,2.4,3.6);
-   Graph_massModel3->SetMinimum(11.367);
-   Graph_massModel3->SetMaximum(203.0545);
+   Graph_massModel3->SetMinimum(9.983505);
+   Graph_massModel3->SetMaximum(190.3526);
    Graph_massModel3->SetDirectory(nullptr);
    Graph_massModel3->SetStats(0);
 
@@ -214,31 +210,31 @@ void cMassFig_PP_pT15_30()
    
    graph->Draw("l");
    
-   TH1D *frame_mass_d7b99b0__2 = new TH1D("frame_mass_d7b99b0__2"," ",40,2.5,3.5);
-   frame_mass_d7b99b0__2->SetBinContent(1,195.0304);
-   frame_mass_d7b99b0__2->SetMinimum(5);
-   frame_mass_d7b99b0__2->SetMaximum(400);
-   frame_mass_d7b99b0__2->SetEntries(2);
-   frame_mass_d7b99b0__2->SetDirectory(nullptr);
-   frame_mass_d7b99b0__2->SetStats(0);
+   TH1D *frame_mass_cf4a630__2 = new TH1D("frame_mass_cf4a630__2"," ",40,2.5,3.5);
+   frame_mass_cf4a630__2->SetBinContent(1,194.9056);
+   frame_mass_cf4a630__2->SetMinimum(5);
+   frame_mass_cf4a630__2->SetMaximum(250);
+   frame_mass_cf4a630__2->SetEntries(1);
+   frame_mass_cf4a630__2->SetDirectory(nullptr);
+   frame_mass_cf4a630__2->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   frame_mass_d7b99b0__2->SetLineColor(ci);
-   frame_mass_d7b99b0__2->GetXaxis()->SetTitle("M_{#mu#mu} (GeV/c^{2})");
-   frame_mass_d7b99b0__2->GetXaxis()->SetLabelFont(42);
-   frame_mass_d7b99b0__2->GetXaxis()->SetTitleSize(0.045);
-   frame_mass_d7b99b0__2->GetXaxis()->SetTitleOffset(1);
-   frame_mass_d7b99b0__2->GetXaxis()->SetTitleFont(42);
-   frame_mass_d7b99b0__2->GetYaxis()->SetTitle("Events / ( 0.025 GeV/c^{2} )");
-   frame_mass_d7b99b0__2->GetYaxis()->SetLabelFont(42);
-   frame_mass_d7b99b0__2->GetYaxis()->SetLabelSize(0.04);
-   frame_mass_d7b99b0__2->GetYaxis()->SetTitleSize(0.045);
-   frame_mass_d7b99b0__2->GetYaxis()->SetTitleOffset(1.12);
-   frame_mass_d7b99b0__2->GetYaxis()->SetTitleFont(42);
-   frame_mass_d7b99b0__2->GetZaxis()->SetLabelFont(42);
-   frame_mass_d7b99b0__2->GetZaxis()->SetTitleOffset(1);
-   frame_mass_d7b99b0__2->GetZaxis()->SetTitleFont(42);
-   frame_mass_d7b99b0__2->Draw("AXISSAME");
+   frame_mass_cf4a630__2->SetLineColor(ci);
+   frame_mass_cf4a630__2->GetXaxis()->SetTitle("M_{#mu#mu} (GeV/c^{2})");
+   frame_mass_cf4a630__2->GetXaxis()->SetLabelFont(42);
+   frame_mass_cf4a630__2->GetXaxis()->SetTitleSize(0.045);
+   frame_mass_cf4a630__2->GetXaxis()->SetTitleOffset(1);
+   frame_mass_cf4a630__2->GetXaxis()->SetTitleFont(42);
+   frame_mass_cf4a630__2->GetYaxis()->SetTitle("Events / ( 0.025 GeV/c^{2} )");
+   frame_mass_cf4a630__2->GetYaxis()->SetLabelFont(42);
+   frame_mass_cf4a630__2->GetYaxis()->SetLabelSize(0.04);
+   frame_mass_cf4a630__2->GetYaxis()->SetTitleSize(0.045);
+   frame_mass_cf4a630__2->GetYaxis()->SetTitleOffset(1.12);
+   frame_mass_cf4a630__2->GetYaxis()->SetTitleFont(42);
+   frame_mass_cf4a630__2->GetZaxis()->SetLabelFont(42);
+   frame_mass_cf4a630__2->GetZaxis()->SetTitleOffset(1);
+   frame_mass_cf4a630__2->GetZaxis()->SetTitleFont(42);
+   frame_mass_cf4a630__2->Draw("AXISSAME");
    TLatex *   tex = new TLatex(0.13,0.85,"ALICE performance, pp, #sqrt{s} = 13.6 TeV");
    tex->SetNDC();
    tex->SetTextFont(42);
@@ -257,13 +253,13 @@ void cMassFig_PP_pT15_30()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2,0.54,"N_{J/#psi} = 1352#pm46");
+      tex = new TLatex(0.2,0.54,"N_{J/#psi} = 1421#pm47");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2,0.49,"N_{bkg} = 768#pm39");
+      tex = new TLatex(0.2,0.49,"N_{bkg} = 699#pm38");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.03);
@@ -318,7 +314,7 @@ void cMassFig_PP_pT15_30()
    pt->SetTextFont(42);
    TText *pt_LaTex = pt->AddText(" ");
    pt->Draw();
-      tex = new TLatex(0.2,0.44,"#chi^{2}/ndof = 43 / 40 ");
+      tex = new TLatex(0.2,0.44,"#chi^{2}/ndof = 26 / 40 ");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.03);
@@ -328,7 +324,4 @@ void cMassFig_PP_pT15_30()
    cMassFig_PP->cd();
    cMassFig_PP->Modified();
    cMassFig_PP->SetSelected(cMassFig_PP);
-
-   cMassFig_PP->SaveAs("../pdf/cMassFig_PP_pT15_30.pdf");
-   cMassFig_PP->SaveAs("../pdf/cMassFig_PP_pT15_30.png");
 }
