@@ -315,13 +315,19 @@ void cTauz_PP_pT15_30()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.79,"2.5 < |#it{y}^{#mu#mu}| < 3.6");
+   tex = new TLatex(0.15,0.79,"MFT+MCH+MID");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.74,"15 GeV/c < #it{p}_{T}^{#mu#mu} < 30 GeV/c");
+      tex = new TLatex(0.15,0.74,"2.5 < |#it{y}^{#mu#mu}| < 3.6");
+   tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.15,0.69,"15 GeV/c < #it{p}_{T}^{#mu#mu} < 30 GeV/c");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
@@ -373,7 +379,11 @@ void cTauz_PP_pT15_30()
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    leg->Draw();
+<<<<<<< HEAD
       tex = new TLatex(0.15,0.64,"#chi^{2}/ndof = 16 / 20 ");
+=======
+      tex = new TLatex(0.15,0.59,"#chi^{2}/ndof = 16 / 20 ");
+>>>>>>> 229c328 (Adding MFT MCH MID)
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
@@ -392,4 +402,7 @@ void cTauz_PP_pT15_30()
    cTauz_PP->cd();
    cTauz_PP->Modified();
    cTauz_PP->SetSelected(cTauz_PP);
+
+   cTauz_PP->SaveAs("../pdf/cTauz_PP_pT15_30.pdf");
+   cTauz_PP->SaveAs("../png/cTauz_PP_pT15_30.png");
 }

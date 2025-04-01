@@ -317,30 +317,47 @@ void c2DFitbis_pT15_30()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.79,"2.5 < |#it{y}^{#mu#mu}| < 3.6");
+      tex = new TLatex(0.15,0.79,"MFT+MCH+MID");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.74,"15 GeV/c < #it{p}_{T}^{#mu#mu} < 30 GeV/c");
+      tex = new TLatex(0.15,0.74,"2.5 < |#it{y}^{#mu#mu}| < 3.6");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
+<<<<<<< HEAD
       tex = new TLatex(0.15,0.54,"N_{J/#psi} = 1421#pm47");
+=======
+      tex = new TLatex(0.15,0.69,"15 GeV/c < #it{p}_{T}^{#mu#mu} < 30 GeV/c");
+>>>>>>> 229c328 (Adding MFT MCH MID)
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
+<<<<<<< HEAD
+      tex = new TLatex(0.15,0.49,"N_{bkg} = 699#pm38");
+=======
+      tex = new TLatex(0.15,0.54,"N_{J/#psi} = 1421#pm47");
+>>>>>>> 229c328 (Adding MFT MCH MID)
+   tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+<<<<<<< HEAD
+=======
       tex = new TLatex(0.15,0.49,"N_{bkg} = 699#pm38");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
+>>>>>>> 229c328 (Adding MFT MCH MID)
       tex = new TLatex(0.15,0.44,"f_{B} = 0.412#pm0.020");
    tex->SetNDC();
    tex->SetTextFont(42);
@@ -414,4 +431,7 @@ void c2DFitbis_pT15_30()
    c2DFitbis->cd();
    c2DFitbis->Modified();
    c2DFitbis->SetSelected(c2DFitbis);
+
+   c2DFitbis->SaveAs("../pdf/c2DFitbis_pT15_30.pdf");
+   c2DFitbis->SaveAs("../png/c2DFitbis_pT15_30.png");
 }

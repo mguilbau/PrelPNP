@@ -239,7 +239,7 @@ void cMassFig_PP_pT6_8()
    frame_mass_e91f610__2->GetZaxis()->SetTitleOffset(1);
    frame_mass_e91f610__2->GetZaxis()->SetTitleFont(42);
    frame_mass_e91f610__2->Draw("AXISSAME");
-   TLatex *   tex = new TLatex(0.13,0.85,"ALICE performance, pp, #sqrt{s} = 13.6 TeV");
+   /*TLatex *   tex = new TLatex(0.13,0.85,"ALICE performance, pp, #sqrt{s} = 13.6 TeV");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
@@ -267,6 +267,37 @@ void cMassFig_PP_pT6_8()
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.03);
+   tex->SetLineWidth(2);
+   tex->Draw();*/
+
+   TLatex *   tex = new TLatex(0.13,0.85,"ALICE performance, pp, #sqrt{s} = 13.6 TeV");
+   tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.15,0.79,"MFT+MCH+MID");
+   tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.15,0.74,"2.5 < |#it{y}^{#mu#mu}| < 3.6");
+   tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.15,0.69,"6 GeV/c < #it{p}_{T}^{#mu#mu} < 8 GeV/c");
+   tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.15,0.59,"#chi^{2}/ndof = 50 / 40 ");
+   tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
    
@@ -318,17 +349,17 @@ void cMassFig_PP_pT6_8()
    pt->SetTextFont(42);
    TText *pt_LaTex = pt->AddText(" ");
    pt->Draw();
-      tex = new TLatex(0.2,0.44,"#chi^{2}/ndof = 50 / 40 ");
+      /*tex = new TLatex(0.2,0.44,"#chi^{2}/ndof = 50 / 40 ");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.03);
    tex->SetLineWidth(2);
-   tex->Draw();
+   tex->Draw();*/
    pad1_PP__0->Modified();
    cMassFig_PP->cd();
    cMassFig_PP->Modified();
    cMassFig_PP->SetSelected(cMassFig_PP);
 
    cMassFig_PP->SaveAs("../pdf/cMassFig_PP_pT6_8.pdf");
-   cMassFig_PP->SaveAs("../pdf/cMassFig_PP_pT6_8.png");
+   cMassFig_PP->SaveAs("../png/cMassFig_PP_pT6_8.png");
 }
