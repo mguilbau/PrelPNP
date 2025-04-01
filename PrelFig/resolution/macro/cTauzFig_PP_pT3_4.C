@@ -4,8 +4,8 @@
 void cTauzFig_PP_pT3_4()
 {
 //=========Macro generated from canvas: cTauzFig_PP/cTauzFig
-//=========  (Mon Mar 31 20:42:47 2025) by ROOT version 6.32.06
-   TCanvas *cTauzFig_PP = new TCanvas("cTauzFig_PP", "cTauzFig",695,1104,1000,800);
+//=========  (Tue Apr  1 10:47:15 2025) by ROOT version 6.32.06
+   TCanvas *cTauzFig_PP = new TCanvas("cTauzFig_PP", "cTauzFig",40,63,1000,800);
    cTauzFig_PP->Range(0,0,1,1);
    cTauzFig_PP->SetFillColor(0);
    cTauzFig_PP->SetBorderMode(0);
@@ -24,35 +24,35 @@ void cTauzFig_PP_pT3_4()
    pad1_TauzPP__1->SetFrameBorderMode(0);
    pad1_TauzPP__1->SetFrameBorderMode(0);
    
-   TH1D *frame_tau_101cf040__3 = new TH1D("frame_tau_101cf040__3"," ",80,-10,10);
-   frame_tau_101cf040__3->SetBinContent(1,41914.53);
-   frame_tau_101cf040__3->SetMinimum(5);
-   frame_tau_101cf040__3->SetMaximum(500000);
-   frame_tau_101cf040__3->SetEntries(3);
-   frame_tau_101cf040__3->SetDirectory(nullptr);
-   frame_tau_101cf040__3->SetStats(0);
+   TH1D *frame_tau_e2e5680__3 = new TH1D("frame_tau_e2e5680__3"," ",80,-10,10);
+   frame_tau_e2e5680__3->SetBinContent(1,42022.27);
+   frame_tau_e2e5680__3->SetMinimum(5);
+   frame_tau_e2e5680__3->SetMaximum(500000);
+   frame_tau_e2e5680__3->SetEntries(3);
+   frame_tau_e2e5680__3->SetDirectory(nullptr);
+   frame_tau_e2e5680__3->SetStats(0);
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
-   frame_tau_101cf040__3->SetLineColor(ci);
-   frame_tau_101cf040__3->GetXaxis()->SetTitle("l_{J/#Psi} (mm)");
-   frame_tau_101cf040__3->GetXaxis()->SetRange(21,60);
-   frame_tau_101cf040__3->GetXaxis()->SetLabelFont(42);
-   frame_tau_101cf040__3->GetXaxis()->SetLabelSize(0.04);
-   frame_tau_101cf040__3->GetXaxis()->SetTitleSize(0.045);
-   frame_tau_101cf040__3->GetXaxis()->SetTitleOffset(1);
-   frame_tau_101cf040__3->GetXaxis()->SetTitleFont(42);
-   frame_tau_101cf040__3->GetYaxis()->SetTitle("Events / ( 0.25 mm )");
-   frame_tau_101cf040__3->GetYaxis()->SetLabelFont(42);
-   frame_tau_101cf040__3->GetYaxis()->SetLabelSize(0.04);
-   frame_tau_101cf040__3->GetYaxis()->SetTitleSize(0.045);
-   frame_tau_101cf040__3->GetYaxis()->SetTitleOffset(0.99);
-   frame_tau_101cf040__3->GetYaxis()->SetTitleFont(42);
-   frame_tau_101cf040__3->GetZaxis()->SetLabelFont(42);
-   frame_tau_101cf040__3->GetZaxis()->SetTitleOffset(1);
-   frame_tau_101cf040__3->GetZaxis()->SetTitleFont(42);
-   frame_tau_101cf040__3->Draw("FUNC");
+   frame_tau_e2e5680__3->SetLineColor(ci);
+   frame_tau_e2e5680__3->GetXaxis()->SetTitle("l_{J/#Psi} (mm)");
+   frame_tau_e2e5680__3->GetXaxis()->SetRange(21,60);
+   frame_tau_e2e5680__3->GetXaxis()->SetLabelFont(42);
+   frame_tau_e2e5680__3->GetXaxis()->SetLabelSize(0.04);
+   frame_tau_e2e5680__3->GetXaxis()->SetTitleSize(0.045);
+   frame_tau_e2e5680__3->GetXaxis()->SetTitleOffset(1);
+   frame_tau_e2e5680__3->GetXaxis()->SetTitleFont(42);
+   frame_tau_e2e5680__3->GetYaxis()->SetTitle("Events / ( 0.25 mm )");
+   frame_tau_e2e5680__3->GetYaxis()->SetLabelFont(42);
+   frame_tau_e2e5680__3->GetYaxis()->SetLabelSize(0.04);
+   frame_tau_e2e5680__3->GetYaxis()->SetTitleSize(0.045);
+   frame_tau_e2e5680__3->GetYaxis()->SetTitleOffset(0.99);
+   frame_tau_e2e5680__3->GetYaxis()->SetTitleFont(42);
+   frame_tau_e2e5680__3->GetZaxis()->SetLabelFont(42);
+   frame_tau_e2e5680__3->GetZaxis()->SetTitleOffset(1);
+   frame_tau_e2e5680__3->GetZaxis()->SetTitleFont(42);
+   frame_tau_e2e5680__3->Draw("FUNC");
    
    Double_t h_data_sig_cut_fx3002[80] = { -9.875, -9.625, -9.375, -9.125, -8.875, -8.625, -8.375, -8.125, -7.875, -7.625, -7.375, -7.125, -6.875, -6.625, -6.375, -6.125, -5.875,
    -5.625, -5.375, -5.125, -4.875, -4.625, -4.375, -4.125, -3.875, -3.625, -3.375, -3.125, -2.875, -2.625, -2.375, -2.125, -1.875,
@@ -118,11 +118,11 @@ void cTauzFig_PP_pT3_4()
    3.75, 4, 4.25, 4.5, 4.75, 5, 5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5,
    7.75, 8, 8.25, 8.5, 8.75, 9, 9.25, 9.5, 9.75, 10, 10, 10.25, 10.25025 };
    Double_t gauss1_fy4[110] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-   0, 0, 0, 0, 0, 0, 0, 0, 1.151487e-296, 2.107927e-262, 3.235421e-230, 4.163754e-200, 4.492813e-172, 4.06472e-146, 3.083344e-122, 1.961067e-100,
-   1.045783e-80, 4.675952e-63, 1.752982e-47, 5.510156e-34, 1.45221e-22, 3.20903e-13, 5.94562e-06, 0.9236334, 8.686981, 60.59761, 143.0805, 313.5159, 637.5191, 1203.043, 2106.801, 3423.892,
-   5163.82, 7227.307, 9387.203, 11314.89, 12656.65, 13138.37, 12656.65, 11314.89, 9387.203, 7227.307, 5163.82, 3423.892, 2106.801, 1203.043, 637.5191, 313.5159,
-   143.0805, 60.59761, 8.686981, 0.9236334, 5.94562e-06, 3.20903e-13, 1.45221e-22, 5.510156e-34, 1.752982e-47, 4.675952e-63, 1.045783e-80, 1.961067e-100, 3.083344e-122, 4.06472e-146, 4.492813e-172, 4.163754e-200,
-   3.235421e-230, 2.107927e-262, 1.151487e-296, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+   0, 0, 0, 0, 0, 0, 0, 0, 3.605502e-297, 7.069642e-263, 1.162273e-230, 1.60213e-200, 1.851683e-172, 1.79438e-146, 1.457945e-122, 9.932235e-101,
+   5.673249e-81, 2.717038e-63, 1.091035e-47, 3.673333e-34, 1.036958e-22, 2.454376e-13, 4.870797e-06, 0.8104719, 7.754718, 55.03152, 131.0587, 289.6506, 594.0698, 1130.719, 1997.223, 3273.804,
+   4980.044, 7030.205, 9209.947, 11196.97, 12632.77, 13226.68, 12851.61, 11588.26, 9696.918, 7530.146, 5426.596, 3629.158, 2252.364, 1297.256, 693.3735, 343.9245,
+   158.3118, 67.62665, 9.86257, 1.066792, 7.355509e-06, 4.252308e-13, 2.061179e-22, 8.376948e-34, 2.854532e-47, 8.155731e-63, 1.953754e-80, 3.924245e-100, 6.608778e-122, 9.331797e-146, 1.104812e-171, 1.096707e-199,
+   9.127918e-230, 6.36989e-262, 3.727101e-296, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    TGraph *graph = new TGraph(110,gauss1_fx4,gauss1_fy4);
    graph->SetName("gauss1");
@@ -135,8 +135,8 @@ void cTauzFig_PP_pT3_4()
    graph->SetLineWidth(3);
    
    TH1F *Graph_gauss14 = new TH1F("Graph_gauss14","Projection of ",110,-12.3003,12.3003);
-   Graph_gauss14->SetMinimum(14.45221);
-   Graph_gauss14->SetMaximum(14452.21);
+   Graph_gauss14->SetMinimum(14.54935);
+   Graph_gauss14->SetMaximum(14549.35);
    Graph_gauss14->SetDirectory(nullptr);
    Graph_gauss14->SetStats(0);
 
@@ -154,21 +154,21 @@ void cTauzFig_PP_pT3_4()
    
    graph->Draw("l");
    
-   Double_t DCB_fx5[104] = { -10.25025, -10.25, -10, -9.75, -9.5, -9.25, -9, -8.75, -8.5, -8.25, -8, -7.75, -7.5, -7.25, -7, -6.75, -6.5,
+   Double_t DCB_fx5[105] = { -10.25025, -10.25, -10, -9.75, -9.5, -9.25, -9, -8.75, -8.5, -8.25, -8, -7.75, -7.5, -7.25, -7, -6.75, -6.5,
    -6.25, -6, -5.75, -5.5, -5.25, -5, -4.75, -4.5, -4.25, -4, -3.75, -3.5, -3.25, -3, -2.75, -2.5,
    -2.25, -2, -1.75, -1.5, -1.25, -1, -0.75, -0.5, -0.375, -0.3125, -0.25, -0.21875, -0.1875, -0.15625, -0.125, -0.09375,
-   -0.0625, -0.03125, 0, 0.03125, 0.0625, 0.09375, 0.125, 0.15625, 0.1875, 0.21875, 0.25, 0.3125, 0.375, 0.5, 0.75, 1,
-   1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 4.75, 5,
-   5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5, 7.75, 8, 8.25, 8.5, 8.75, 9,
-   9.25, 9.5, 9.75, 10, 10, 10.25, 10.25025 };
-   Double_t DCB_fy5[104] = { 0, 3.875287, 3.875287, 4.017143, 4.168102, 4.329014, 4.500833, 4.684633, 4.881633, 5.093215, 5.320952, 5.566648, 5.832372, 6.120514, 6.433847, 6.775602, 7.149568,
-   7.560214, 8.012844, 8.513798, 9.070709, 9.692847, 10.39157, 11.18092, 12.07848, 13.10649, 14.29347, 15.67657, 17.30499, 19.24514, 21.58868, 24.46539, 28.06463,
-   32.67278, 38.74217, 47.02675, 58.87251, 76.90987, 106.9676, 164.6279, 307.138, 486.084, 656.9035, 963.6933, 1224.224, 1633.225, 2346.888, 3826.712, 7928.623,
-   15230.74, 22533.84, 25676.74, 22533.84, 15230.74, 7928.623, 3826.712, 2346.888, 1633.225, 1224.224, 963.6933, 656.9035, 486.084, 307.138, 164.6279, 106.9676,
-   76.90987, 58.87251, 47.02675, 38.74217, 32.67278, 28.06463, 24.46539, 21.58868, 19.24514, 17.30499, 15.67657, 14.29347, 13.10649, 12.07848, 11.18092, 10.39157,
-   9.692847, 9.070709, 8.513798, 8.012844, 7.560214, 7.149568, 6.775602, 6.433847, 6.120514, 5.832372, 5.566648, 5.320952, 5.093215, 4.881633, 4.684633, 4.500833,
-   4.329014, 4.168102, 4.017143, 3.875287, 3.875287, 3.875287, 0 };
-   graph = new TGraph(104,DCB_fx5,DCB_fy5);
+   -0.0625, -0.03125, 0, 0.03125, 0.0625, 0.09375, 0.125, 0.15625, 0.1875, 0.21875, 0.25, 0.28125, 0.3125, 0.375, 0.5, 0.75,
+   1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 4.75,
+   5, 5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5, 7.75, 8, 8.25, 8.5, 8.75,
+   9, 9.25, 9.5, 9.75, 10, 10, 10.25, 10.25025 };
+   Double_t DCB_fy5[105] = { 0, 3.901355, 3.901355, 4.044112, 4.196027, 4.357953, 4.53085, 4.7158, 4.914026, 5.126918, 5.356058, 5.603258, 5.8706, 6.160485, 6.4757, 6.819493, 7.195671,
+   7.608724, 8.063981, 8.567811, 9.127882, 9.753506, 10.45609, 11.24973, 12.15207, 13.18545, 14.37848, 15.76844, 17.40467, 19.35378, 21.70764, 24.59629, 28.20939,
+   32.83359, 38.92136, 47.22624, 59.09191, 77.14043, 107.1695, 164.626, 305.9105, 482.0719, 649.1026, 946.6309, 1197.054, 1586.43, 2255.97, 3609.683, 7285.754,
+   14422.27, 21987.88, 25818.06, 23348.27, 16262.09, 8723.461, 4128.917, 2480.914, 1707.468, 1271.015, 995.7721, 808.7402, 674.6372, 497.3381, 312.88, 167.0286,
+   108.3199, 77.79537, 59.50685, 47.50896, 39.12442, 32.98539, 28.32647, 24.68891, 21.78245, 19.41526, 17.45595, 15.81175, 14.41547, 13.21735, 12.17982, 11.27405,
+   10.47755, 9.772561, 9.144896, 8.58308, 8.077748, 7.621189, 7.207002, 6.829831, 6.485164, 6.169175, 5.878603, 5.610649, 5.3629, 5.133267, 4.919932, 4.721305,
+   4.535991, 4.362763, 4.200536, 4.048346, 3.905336, 3.905336, 3.905336, 0 };
+   graph = new TGraph(105,DCB_fx5,DCB_fy5);
    graph->SetName("DCB");
    graph->SetTitle("Projection of ");
    graph->SetFillStyle(1000);
@@ -178,9 +178,9 @@ void cTauzFig_PP_pT3_4()
    graph->SetLineStyle(2);
    graph->SetLineWidth(3);
    
-   TH1F *Graph_DCB5 = new TH1F("Graph_DCB5","Projection of ",104,-12.3003,12.3003);
-   Graph_DCB5->SetMinimum(28.24441);
-   Graph_DCB5->SetMaximum(28244.41);
+   TH1F *Graph_DCB5 = new TH1F("Graph_DCB5","Projection of ",105,-12.3003,12.3003);
+   Graph_DCB5->SetMinimum(28.39987);
+   Graph_DCB5->SetMaximum(28399.87);
    Graph_DCB5->SetDirectory(nullptr);
    Graph_DCB5->SetStats(0);
 
@@ -205,13 +205,13 @@ void cTauzFig_PP_pT3_4()
    0.375, 0.4375, 0.5, 0.625, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5,
    3.75, 4, 4.25, 4.5, 4.75, 5, 5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5,
    7.75, 8, 8.25, 8.5, 8.75, 9, 9.25, 9.5, 9.75, 10, 10, 10.25, 10.25025 };
-   Double_t model_fy6[110] = { 0, 3.875287, 3.875287, 4.017143, 4.168102, 4.329014, 4.500833, 4.684633, 4.881633, 5.093215, 5.320952, 5.566648, 5.832372, 6.120514, 6.433847, 6.775602, 7.149568,
-   7.560214, 8.012844, 8.513798, 9.070709, 9.692847, 10.39157, 11.18092, 12.07848, 13.10649, 14.29347, 15.67657, 17.30499, 19.24514, 21.58868, 24.46539, 28.06463,
-   32.67278, 38.74217, 47.02675, 58.87251, 76.90987, 106.9676, 164.6279, 308.068, 547.2117, 704.9913, 973.5918, 1429.92, 2181.153, 3358.929, 5108.374, 7601.851,
-   11214.56, 17597.76, 27027.18, 35957.67, 39918.6, 36607.83, 28186.34, 19066.15, 12820.92, 9236.898, 6713.351, 4903.932, 3651.078, 2817.982, 2278.206, 1927.778,
-   1691.566, 1388.403, 1181.937, 883.9996, 673.2298, 402.9751, 249.1869, 159.1382, 105.3816, 72.70483, 52.43913, 39.5687, 31.16079, 25.48542, 21.51305, 18.62492,
-   16.44477, 14.74056, 13.3667, 12.22993, 11.26906, 10.44287, 9.722703, 9.088085, 8.523911, 8.01873, 7.56364, 7.151562, 6.776762, 6.434522, 6.120907, 5.8326,
-   5.566781, 5.32103, 5.09326, 4.88166, 4.684649, 4.500841, 4.329019, 4.168105, 4.017145, 3.875288, 3.875288, 3.875288, 0 };
+   Double_t model_fy6[110] = { 0, 3.901355, 3.901355, 4.044112, 4.196027, 4.357953, 4.53085, 4.7158, 4.914026, 5.126918, 5.356058, 5.603258, 5.8706, 6.160485, 6.4757, 6.819493, 7.195671,
+   7.608724, 8.063981, 8.567811, 9.127882, 9.753506, 10.45609, 11.24973, 12.15207, 13.18545, 14.37848, 15.76844, 17.40467, 19.35378, 21.70764, 24.59629, 28.20939,
+   32.83359, 38.92136, 47.22624, 59.09191, 77.14043, 107.1695, 164.626, 306.726, 537.5374, 687.1995, 941.3935, 1374.031, 2089.541, 3218.039, 4904.119, 7314.257,
+   10777.76, 16738.08, 26035.47, 35290.61, 40021.21, 37471.27, 29339.94, 20024.49, 13289.29, 9507.698, 6877.452, 4991.108, 3681.934, 2810.871, 2248.508, 1886.876,
+   1646.878, 1346.79, 1147.507, 862.7038, 661.2747, 401.3728, 251.5549, 162.5339, 108.5967, 75.34511, 54.46168, 41.06039, 32.23922, 26.25924, 22.06968, 19.02983,
+   16.74495, 14.96879, 13.54543, 12.37435, 11.38939, 10.54593, 9.813111, 9.16894, 8.597336, 8.0862, 7.626201, 7.209974, 6.831593, 6.486209, 6.169795, 5.878971,
+   5.610867, 5.363029, 5.133344, 4.919977, 4.721332, 4.536007, 4.362773, 4.200541, 4.048349, 3.905338, 3.905338, 3.905338, 0 };
    graph = new TGraph(110,model_fx6,model_fy6);
    graph->SetName("model");
    graph->SetTitle("Projection of ");
@@ -222,8 +222,8 @@ void cTauzFig_PP_pT3_4()
    graph->SetLineWidth(3);
    
    TH1F *Graph_model6 = new TH1F("Graph_model6","Projection of ",110,-12.3003,12.3003);
-   Graph_model6->SetMinimum(43.91046);
-   Graph_model6->SetMaximum(43910.46);
+   Graph_model6->SetMinimum(44.02333);
+   Graph_model6->SetMaximum(44023.33);
    Graph_model6->SetDirectory(nullptr);
    Graph_model6->SetStats(0);
 
@@ -241,33 +241,33 @@ void cTauzFig_PP_pT3_4()
    
    graph->Draw("l");
    
-   TH1D *frame_tau_101cf040__4 = new TH1D("frame_tau_101cf040__4"," ",80,-10,10);
-   frame_tau_101cf040__4->SetBinContent(1,41914.53);
-   frame_tau_101cf040__4->SetMinimum(5);
-   frame_tau_101cf040__4->SetMaximum(500000);
-   frame_tau_101cf040__4->SetEntries(3);
-   frame_tau_101cf040__4->SetDirectory(nullptr);
-   frame_tau_101cf040__4->SetStats(0);
+   TH1D *frame_tau_e2e5680__4 = new TH1D("frame_tau_e2e5680__4"," ",80,-10,10);
+   frame_tau_e2e5680__4->SetBinContent(1,42022.27);
+   frame_tau_e2e5680__4->SetMinimum(5);
+   frame_tau_e2e5680__4->SetMaximum(500000);
+   frame_tau_e2e5680__4->SetEntries(3);
+   frame_tau_e2e5680__4->SetDirectory(nullptr);
+   frame_tau_e2e5680__4->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   frame_tau_101cf040__4->SetLineColor(ci);
-   frame_tau_101cf040__4->GetXaxis()->SetTitle("l_{J/#Psi} (mm)");
-   frame_tau_101cf040__4->GetXaxis()->SetRange(21,60);
-   frame_tau_101cf040__4->GetXaxis()->SetLabelFont(42);
-   frame_tau_101cf040__4->GetXaxis()->SetLabelSize(0.04);
-   frame_tau_101cf040__4->GetXaxis()->SetTitleSize(0.045);
-   frame_tau_101cf040__4->GetXaxis()->SetTitleOffset(1);
-   frame_tau_101cf040__4->GetXaxis()->SetTitleFont(42);
-   frame_tau_101cf040__4->GetYaxis()->SetTitle("Events / ( 0.25 mm )");
-   frame_tau_101cf040__4->GetYaxis()->SetLabelFont(42);
-   frame_tau_101cf040__4->GetYaxis()->SetLabelSize(0.04);
-   frame_tau_101cf040__4->GetYaxis()->SetTitleSize(0.045);
-   frame_tau_101cf040__4->GetYaxis()->SetTitleOffset(0.99);
-   frame_tau_101cf040__4->GetYaxis()->SetTitleFont(42);
-   frame_tau_101cf040__4->GetZaxis()->SetLabelFont(42);
-   frame_tau_101cf040__4->GetZaxis()->SetTitleOffset(1);
-   frame_tau_101cf040__4->GetZaxis()->SetTitleFont(42);
-   frame_tau_101cf040__4->Draw("AXISSAME");
+   frame_tau_e2e5680__4->SetLineColor(ci);
+   frame_tau_e2e5680__4->GetXaxis()->SetTitle("l_{J/#Psi} (mm)");
+   frame_tau_e2e5680__4->GetXaxis()->SetRange(21,60);
+   frame_tau_e2e5680__4->GetXaxis()->SetLabelFont(42);
+   frame_tau_e2e5680__4->GetXaxis()->SetLabelSize(0.04);
+   frame_tau_e2e5680__4->GetXaxis()->SetTitleSize(0.045);
+   frame_tau_e2e5680__4->GetXaxis()->SetTitleOffset(1);
+   frame_tau_e2e5680__4->GetXaxis()->SetTitleFont(42);
+   frame_tau_e2e5680__4->GetYaxis()->SetTitle("Events / ( 0.25 mm )");
+   frame_tau_e2e5680__4->GetYaxis()->SetLabelFont(42);
+   frame_tau_e2e5680__4->GetYaxis()->SetLabelSize(0.04);
+   frame_tau_e2e5680__4->GetYaxis()->SetTitleSize(0.045);
+   frame_tau_e2e5680__4->GetYaxis()->SetTitleOffset(0.99);
+   frame_tau_e2e5680__4->GetYaxis()->SetTitleFont(42);
+   frame_tau_e2e5680__4->GetZaxis()->SetLabelFont(42);
+   frame_tau_e2e5680__4->GetZaxis()->SetTitleOffset(1);
+   frame_tau_e2e5680__4->GetZaxis()->SetTitleFont(42);
+   frame_tau_e2e5680__4->Draw("AXISSAME");
    TLatex *   tex = new TLatex(0.13,0.85,"ALICE performance, pp, #sqrt{s} = 13.6 TeV");
    tex->SetNDC();
    tex->SetTextFont(42);
@@ -326,7 +326,7 @@ void cTauzFig_PP_pT3_4()
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    leg->Draw();
-      tex = new TLatex(0.15,0.64,"#chi^{2}/ndof = 117 / 75 ");
+      tex = new TLatex(0.15,0.64,"#chi^{2}/ndof = 90 / 75 ");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
