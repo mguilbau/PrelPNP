@@ -327,7 +327,7 @@ void cTauz_PP_pT10_15()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.69,"10 GeV/c < #it{p}_{T}^{#mu#mu} < 15 GeV/c");
+      tex = new TLatex(0.15,0.69,"10 < #it{p}_{T}^{#mu#mu} < 15 GeV/c");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);

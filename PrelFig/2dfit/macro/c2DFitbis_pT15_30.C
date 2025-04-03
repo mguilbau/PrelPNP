@@ -329,35 +329,28 @@ void c2DFitbis_pT15_30()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-<<<<<<< HEAD
-      tex = new TLatex(0.15,0.54,"N_{J/#psi} = 1421#pm47");
-=======
-      tex = new TLatex(0.15,0.69,"15 GeV/c < #it{p}_{T}^{#mu#mu} < 30 GeV/c");
->>>>>>> 229c328 (Adding MFT MCH MID)
+      //tex = new TLatex(0.15,0.54,"N_{J/#psi} = 1421#pm47");
+      tex = new TLatex(0.15,0.69,"15 < #it{p}_{T}^{#mu#mu} < 30 GeV/c");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-<<<<<<< HEAD
-      tex = new TLatex(0.15,0.49,"N_{bkg} = 699#pm38");
-=======
+      //tex = new TLatex(0.15,0.49,"N_{bkg} = 699#pm38");
       tex = new TLatex(0.15,0.54,"N_{J/#psi} = 1421#pm47");
->>>>>>> 229c328 (Adding MFT MCH MID)
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-<<<<<<< HEAD
-=======
+
       tex = new TLatex(0.15,0.49,"N_{bkg} = 699#pm38");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
->>>>>>> 229c328 (Adding MFT MCH MID)
+
       tex = new TLatex(0.15,0.44,"f_{B} = 0.412#pm0.020");
    tex->SetNDC();
    tex->SetTextFont(42);
@@ -405,8 +398,8 @@ void c2DFitbis_pT15_30()
    entry->SetTextFont(42);
    entry=leg->AddEntry("NULL","Background","l");
    entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineStyle(2);
+   entry->SetLineWidth(3);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);

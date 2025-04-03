@@ -286,7 +286,7 @@ void cTauzFig_PP_pT3_4()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.69,"3 GeV/c < #it{p}_{T}^{#mu#mu} < 4 GeV/c");
+      tex = new TLatex(0.15,0.69,"3 < #it{p}_{T}^{#mu#mu} < 4 GeV/c");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
@@ -332,11 +332,8 @@ void cTauzFig_PP_pT3_4()
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    leg->Draw();
-<<<<<<< HEAD
-      tex = new TLatex(0.15,0.64,"#chi^{2}/ndof = 90 / 75 ");
-=======
+      //tex = new TLatex(0.15,0.64,"#chi^{2}/ndof = 90 / 75 ");
       tex = new TLatex(0.15,0.59,"#chi^{2}/ndof = 90 / 75 ");
->>>>>>> 229c328 (Adding MFT MCH MID)
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);

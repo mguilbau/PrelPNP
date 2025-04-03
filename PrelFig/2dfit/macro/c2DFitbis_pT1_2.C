@@ -331,7 +331,7 @@ void c2DFitbis_pT1_2()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.69,"1 GeV/c < #it{p}_{T}^{#mu#mu} < 2 GeV/c");
+      tex = new TLatex(0.15,0.69,"1 < #it{p}_{T}^{#mu#mu} < 2 GeV/c");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
@@ -396,8 +396,8 @@ void c2DFitbis_pT1_2()
    entry->SetTextFont(42);
    entry=leg->AddEntry("NULL","Background","l");
    entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineStyle(2);
+   entry->SetLineWidth(3);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);

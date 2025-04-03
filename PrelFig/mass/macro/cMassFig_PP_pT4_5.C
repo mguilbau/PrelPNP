@@ -288,7 +288,7 @@ void cMassFig_PP_pT4_5()
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.69,"4 GeV/c < #it{p}_{T}^{#mu#mu} < 5 GeV/c");
+      tex = new TLatex(0.15,0.69,"4 < #it{p}_{T}^{#mu#mu} < 5 GeV/c");
    tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.04);
